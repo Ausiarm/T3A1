@@ -67,6 +67,22 @@ Outline a standard high level structure for a MERN stack application and explain
 
 *Shows almost flawless understanding of the high level structure of the app*
 
+First things first, what is the MERN stack?
+  * MERN stands for MongoDB, Express, React, and Node. These are all individual technologies that, when "stacked" or used in conjunction, allow for the creation of a 3-tier app (front end, back end, database). The real beauty of this whole system is that through the stack it is possible to create all of this solely through coding in Javascript.
+
+In order to simplify the structural analysis of a MERN stack app, let's break it down into three parts:
+  * Front End 
+    * In simple terms, what the user actually sees.
+    * in MERN stack front end is handled by React.js
+      * React.js:
+        * React is a JavaScript framework that allows for the creation of dynamic interfaces that can effectively and capably respond to user interaction. In essence, with react it is possible to utilize components built into the React framework that create a stunning visual interface. Once set up it can then be easily connected to data on the backend that will allow for actual functionality. 
+  * Back End
+    * Node.js
+    * Express.js
+  * Database
+    * MongoDB
+
+
 
 
 
