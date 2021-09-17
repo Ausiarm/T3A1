@@ -65,22 +65,36 @@ These elements combined together form the basis of software that is considered q
 ## Question 3
 Outline a standard high level structure for a MERN stack application and explain the components
 
-*Shows almost flawless understanding of the high level structure of the app*
-
 First things first, what is the MERN stack?
-  * MERN stands for MongoDB, Express, React, and Node. These are all individual technologies that, when "stacked" or used in conjunction, allow for the creation of a 3-tier app (front end, back end, database). The real beauty of this whole system is that through the stack it is possible to create all of this solely through coding in Javascript.
+  * MERN stands for MongoDB, Express, React, and Node. These are all individual technologies that, when "stacked" or used in conjunction, allow for the creation of 3-tier architecture (front end, back end, database). The real beauty of this whole system is that through the stack it is possible to create all of this solely through coding in Javascript.
 
 In order to simplify the structural analysis of a MERN stack app, let's break it down into three parts:
   * Front End 
     * In simple terms, what the user actually sees.
-    * in MERN stack front end is handled by React.js
+    * in MERN stack, front end is handled by React.js
       * React.js:
-        * React is a JavaScript framework that allows for the creation of dynamic interfaces that can effectively and capably respond to user interaction. In essence, with react it is possible to utilize components built into the React framework that create a stunning visual interface. Once set up it can then be easily connected to data on the backend that will allow for actual functionality. 
+        * React is a JavaScript framework that allows for the creation of dynamic interfaces that can effectively and capably respond to user interaction. In essence, with react it is possible to utilize components built into the React framework that create a pleasing visual interface. Once set up, it can then be easily connected to data on the backend that will allow for actual functionality.
+      * This is considered the top, first, or front-end display tier of the architecture pattern. 
   * Back End
-    * Node.js
-    * Express.js
+    * Express.js & Node.js:
+      * these two go hand in hand as the Express.js is a framework that runs inside of a Node.js server.
+      * Express being a handy and already created framework allows for access to its built in models that allow for powerful and fast URL routing in addition to handling the typical HTTP requests that come about as a result of user interaction with the architecture in the pattern.
+      * It is important to note that the Express.js framework is built to work in conjunction with the methods and models that Node.js makes available for us. These methods and models work with MongoDB and thus allow for interaction with the database without having to explicitly be within the database.  
+    * This considered the middle, second, or application tier of the architecture pattern.
   * Database
-    * MongoDB
+    * MongoDB:
+      * The database utilized for storage of user information or any other data that is pertinent to the app that must be persisted over time. 
+      * React.js creates a JSON document that is sent through the Express.js framework for processing. Once processed, this information is stored within the database and can be accessed again in the same fashion.
+        * Note that the assumption here is that the JSON document created in React.js is valid and can actually be processed by Express.js.
+      * The reason MongoDB is used over other databases is that it was designed to store JSON data natively rather than having to convert and compile into another language before processing. In addition, the query language with which it is accessed is built on JavaScript meaning that its use will come naturally to a developer working in JavaScript. 
+    * This is considered the bottom, third, or database tier of the architecture pattern.
+  * To learn more about where this run down came from and the nitty gritty of how the stack is comprised, information can be found [here](https://www.mongodb.com/mern-stack)
+
+<!-- Now that the stack's make up is explained, lets look at an actual app utilizing the MERN stack and see how each piece works. 
+  * [This](https://www.bezkoder.com/react-node-express-mongodb-mern-stack/) is the source information for the app in question.
+  * Pictorial representation of stack breakdown:
+    * ![MERN](architecture.png) -->
+
 
 
 
@@ -119,6 +133,39 @@ With reference to one of your own projects, discuss what knowledge or skills wer
 ruby marketplace app
 
 *Effectively describes a range of skills and knowledge used to complete a project.*
+
+For this, let us analyze the work I did on the Ruby Marketplace Application for the end of term 2. It can be found [here](https://github.com/Ausiarm/T2A2-marketplace-code).
+  * From the outset I planned to be ambitious with my work in the hope that coming short of intended design would still yield a functional product.
+    * I met quite a few of these intended plans as I was able to:
+      * Properly implement devise in order to allow for the creation of user accounts.
+        * Along with this I managed to build in a form of admin monitoring that would inhibit users from editing posts that they did not create. This was done by simply removing the links to edit for anyone who was not the creator or an admin.
+      * Created a card system whereby a user could create a guide or tutorial on an exercise that they feel is worth sharing and add it to the general repository of stored training methods.
+        * This was possible with the help of the bootstrap gem which proved to be very valuable for expediting the creation of elements with proper CSS styling without much input on my part. 
+        * This general repository is known as the foundation and can be seen [here](https://themelioo.herokuapp.com/). From that page a user can click on the link in the navbar and be taken directly to the page featuring the different guides posted by all other users.
+      * Created an interface that was generally intuitive that would not crowd the user with information upon entering.
+      * Implemented a payment system that could accurately handle user payments by interacting with a webhook that would route user information back to the server for storage. 
+      * Created a database that would be able to store user information and make sure that user information persisted over time. 
+      * Hosted the website on a third party service that allows for continual access to the site for free. 
+      * Used knowledge gained from class to effectively create a ruby application that is a two sided marketplace.
+      * I managed my time well and made sure to have all the theoretical or planning stages finished well before it came time to actually code anything.
+        * The tool that best helped me manage the project and time within was trello. Its features and functionallity really helped me to know what tasks were absolutely necessary and what could be added later on without ruining the app or falling short of goals. 
+        * Furthermore, this was very helpful as it allowed me to effectively finish tasks I had set for myself during the planning phase rather than just winging it and having no idea what to move onto next. 
+    * It is all well and good to list the successes of this endeavour but the failures should also be addressed. 
+      * I was unable to properly implement purchase access for users. 
+        * By this I mean that the marketplace functions more like a service for one time payments rather than a subscription page that allows users to access all the information that they have subscribed to indefinitely until payment fails. 
+        * My temporary solution was to create a myfoundation page which would allow users to see the purchases they have made but only in a preview sense.
+        * In the future what I would like to add is the ability for a user to purchase something and automatically be redirected back to their myfoundation page which would show previews of the guides they own. By clicking into them a user should see a different page rather than simply the view page that is accessible when purchasing the card.  
+      * There is practically no styling done on the project so the end product, while having good functionality, needs work to be more pleasing to the eye.
+        * Specifically, I would like to work more with bootstrap's built in functionalities to further enhance the styling of the website without taking away from its intrinsic simplicity. 
+        * Note that we were explicitly informed that styling would not be graded and as a result it was not something that I chose to focus on. 
+      * I would like to have had more effective use of simple form to create forms that stored more valuable information. 
+        * My forms were fine but probably too safe. There was little to no styling done on the create page that users are directed to and, while not game breaking, it still would be nice to have this aspect more tended to. 
+      * Databases were limited and as a result the scope of the application was much less than I would have liked to cover. 
+        * Essentially there was only one user database when in reality there should have been several in order to respect the normal forms rules that apply to databases. 
+      * I wanted to implement a system that would allow for the user to properly search through listings based off keywords but failed to do so in the time given. 
+        * In addition I wanted to implement a rating system that would persist and allow for posts to become favored over time based off crowed support. 
+      * A general note for the future was that my use of gems limited me from going beyond their base functionality. I should have focused on using them to build a bigger and better product rather than just a carbon copy of other sites that I like or enjoy. 
+      * Probably the first and most important lesson I learned through this work was that I need to keep my base ideas simple as they quickly bloom into massive scope due to the nature of how programming methods work. One thing constantly snowballing to another can work to the advantage of someone who stays simple at the start. On the flip side, in my case, this snowballing created far more complexity and issues with certain parts of the project. Trying to remedy these issues took away valuable development time that could have been spent better elsewhere.
 
 
 
