@@ -127,68 +127,168 @@ Most practices in the IT industry that have staying power are those that have a 
 
 Are these 6 points the totallity of skills that make for a successful project delivery? Perhaps not. However, with these values instilled into a software companies' employees, it should be much easier to deliver a standout product and avoid the pitfalls that come with having a team that is unprepared for work in the real world.
 
+---
+
 ## Question 5
-With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
-
-ruby marketplace app
-
-*Effectively describes a range of skills and knowledge used to complete a project.*
-
-For this, let us analyze the work I did on the Ruby Marketplace Application for the end of term 2. It can be found [here](https://github.com/Ausiarm/T2A2-marketplace-code).
-  * From the outset I planned to be ambitious with my work in the hope that coming short of intended design would still yield a functional product.
-    * I met quite a few of these intended plans as I was able to:
-      * Properly implement devise in order to allow for the creation of user accounts.
-        * Along with this I managed to build in a form of admin monitoring that would inhibit users from editing posts that they did not create. This was done by simply removing the links to edit for anyone who was not the creator or an admin.
-      * Created a card system whereby a user could create a guide or tutorial on an exercise that they feel is worth sharing and add it to the general repository of stored training methods.
-        * This was possible with the help of the bootstrap gem which proved to be very valuable for expediting the creation of elements with proper CSS styling without much input on my part. 
-        * This general repository is known as the foundation and can be seen [here](https://themelioo.herokuapp.com/). From that page a user can click on the link in the navbar and be taken directly to the page featuring the different guides posted by all other users.
-      * Created an interface that was generally intuitive that would not crowd the user with information upon entering.
-      * Implemented a payment system that could accurately handle user payments by interacting with a webhook that would route user information back to the server for storage. 
-      * Created a database that would be able to store user information and make sure that user information persisted over time. 
-      * Hosted the website on a third party service that allows for continual access to the site for free. 
-      * Used knowledge gained from class to effectively create a ruby application that is a two sided marketplace.
-      * I managed my time well and made sure to have all the theoretical or planning stages finished well before it came time to actually code anything.
-        * The tool that best helped me manage the project and time within was trello. Its features and functionallity really helped me to know what tasks were absolutely necessary and what could be added later on without ruining the app or falling short of goals. 
-        * Furthermore, this was very helpful as it allowed me to effectively finish tasks I had set for myself during the planning phase rather than just winging it and having no idea what to move onto next. 
-    * It is all well and good to list the successes of this endeavour but the failures should also be addressed. 
-      * I was unable to properly implement purchase access for users. 
-        * By this I mean that the marketplace functions more like a service for one time payments rather than a subscription page that allows users to access all the information that they have subscribed to indefinitely until payment fails. 
-        * My temporary solution was to create a myfoundation page which would allow users to see the purchases they have made but only in a preview sense.
-        * In the future what I would like to add is the ability for a user to purchase something and automatically be redirected back to their myfoundation page which would show previews of the guides they own. By clicking into them a user should see a different page rather than simply the view page that is accessible when purchasing the card.  
-      * There is practically no styling done on the project so the end product, while having good functionality, needs work to be more pleasing to the eye.
-        * Specifically, I would like to work more with bootstrap's built in functionalities to further enhance the styling of the website without taking away from its intrinsic simplicity. 
-        * Note that we were explicitly informed that styling would not be graded and as a result it was not something that I chose to focus on. 
-      * I would like to have had more effective use of simple form to create forms that stored more valuable information. 
-        * My forms were fine but probably too safe. There was little to no styling done on the create page that users are directed to and, while not game breaking, it still would be nice to have this aspect more tended to. 
-      * Databases were limited and as a result the scope of the application was much less than I would have liked to cover. 
-        * Essentially there was only one user database when in reality there should have been several in order to respect the normal forms rules that apply to databases. 
-      * I wanted to implement a system that would allow for the user to properly search through listings based off keywords but failed to do so in the time given. 
-        * In addition I wanted to implement a rating system that would persist and allow for posts to become favored over time based off crowed support. 
-      * A general note for the future was that my use of gems limited me from going beyond their base functionality. I should have focused on using them to build a bigger and better product rather than just a carbon copy of other sites that I like or enjoy. 
-      * Probably the first and most important lesson I learned through this work was that I need to keep my base ideas simple as they quickly bloom into massive scope due to the nature of how programming methods work. One thing constantly snowballing to another can work to the advantage of someone who stays simple at the start. On the flip side, in my case, this snowballing created far more complexity and issues with certain parts of the project. Trying to remedy these issues took away valuable development time that could have been spent better elsewhere.
-
-
+For Questions 5 and 6, let us analyze the work I did on the Ruby Marketplace Application for the end of term 2. It can be found [here](https://github.com/Ausiarm/T2A2-marketplace-code).
+This marketplace project required general understanding of how Ruby on Rails works in conjunction with a database and a third party system that hosts the database. The skills I made use of to best achieve this goal are as follows:
+  * Ruby on Rails
+    * The main programming language of the project.
+    * Through working with ruby in conjunction with ruby on rails, about 99% of all backend logic was created. 
+    * In respect of the MVC pattern that we learned about in term two, I made sure that my controllers were lean and designed for hand-off from model to view. 
+  * PostgreSQL
+    * PostgreSQL was the database that was linked to my models when generating the project. 
+    * Manipulation of the PostgreSQL database required understanding of the query language used to interact with the databases themselves.
+  * Webhooks
+    * This one was a bit more of a challenge for me. It required the creation of a method that would pull information about the purchaser using stripe to pay. This was This information would then be fed into the database for storage of user and product information. 
+  * Stripe
+    * Using stripe allowed me to practice implementation of gems.
+    * It also led me to try to better understand why or how a payment system can be implemented into a marketplace by wiring it into your code effectively. 
+  * Devise
+    * Using Devise allowed me to practice implementation of gems
+    * Given my realtively small base of knowledge, implementation of an authentication system from scratch would have taken up a great deal of time.
+    * Working with devise helped me understand why it is necessary to implement authentication and authorization into a project like this.
+  * Routing
+    * Before beginning the project, CRUD operations made practically no sense to me. Through working on the marketplace app I have gained a beginner level understanding of how a browser interacts with a server by way of requests being launched through the CRUD operations.
+  * Gems
+    * Before this project I hadn't properly grasped why or how to use a gem to amplify my own work. With the simple from, devise, and stripe gems this all changed. It took some time to understand how to actually make use of the gem once it was installed but once I grasped that I could immediately see why they are valuable. 
+  * Project Management
+    * While before this project I used trello for a couple different working projects, I had never implemented it with such effectiveness. Using it this time around I made sure to properly populate it with information so that it would actually serve to help me keep on track and manage my time and tasks effectively.
+  * JavaScript (minor)
+    * I implemented a small script in order to get some nav-bar functionality but other than that there was very little JavaScript incorporated.
+  * source control
+    * Using github as well as heroku meant that the changes or modifications that were made to the project over time were trackable. It also proved invaluable at certain stages when I had deviated too far from my originally intended design. Normally, these modifications would permanently mutate the overall product but with the ability to reset to earlier points in development this was a non-issue.
+  * MVC Architecture pattern
+    * I have constantly heard about why the MVC pattern is helpful for structuring a project and this time around it proved why people are in favor of it so strongly. 
+    * I made sure that I worked to keep logic out of views and work through the controllers in order to interact with the databases.
 
 
 ## Question 6
-With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
 
-*Evaluates effectiveness of knowledge and skills accurately, providing examples, and providing an insightful improvement on each skill*
+From the outset I planned to be ambitious with my work in the hope that coming short of intended design would still yield a functional product.
+  * I met quite a few of these intended plans as I was able to:
+    * Properly implement devise in order to allow for the creation of user accounts.
+      * Along with this I managed to build in a form of admin monitoring that would inhibit users from editing posts that they did not create. This was done by simply removing the links to edit for anyone who was not the creator or an admin.
+    * Created a card system whereby a user could create a guide or tutorial on an exercise that they feel is worth sharing and add it to the general repository of stored training methods.
+      * This was possible with the help of the bootstrap gem which proved to be very valuable for expediting the creation of elements with proper CSS styling without much input on my part. 
+      * This general repository is known as the foundation and can be seen [here](https://themelioo.herokuapp.com/). From that page a user can click on the link in the navbar and be taken directly to the page featuring the different guides posted by all other users.
+    * Created an interface that was generally intuitive that would not crowd the user with information upon entering.
+    * Implemented a payment system that could accurately handle user payments by interacting with a webhook that would route user information back to the server for storage. 
+    * Created a database that would be able to store user information and make sure that user information persisted over time. 
+    * Hosted the website on a third party service that allows for continual access to the site for free. 
+    * Used knowledge gained from class to effectively create a ruby application that is a two sided marketplace.
+    * I managed my time well and made sure to have all the theoretical or planning stages finished well before it came time to actually code anything.
+      * The tool that best helped me manage the project and time within was trello. Its features and functionallity really helped me to know what tasks were absolutely necessary and what could be added later on without ruining the app or falling short of goals. 
+      * Furthermore, this was very helpful as it allowed me to effectively finish tasks I had set for myself during the planning phase rather than just winging it and having no idea what to move onto next. 
+  * It is all well and good to list the successes of this endeavour but the failures should also be addressed. 
+    * I was unable to properly implement purchase access for users. 
+      * By this I mean that the marketplace functions more like a service for one time payments rather than a subscription page that allows users to access all the information that they have subscribed to indefinitely until payment fails. 
+      * My temporary solution was to create a myfoundation page which would allow users to see the purchases they have made but only in a preview sense.
+      * In the future what I would like to add is the ability for a user to purchase something and automatically be redirected back to their myfoundation page which would show previews of the guides they own. By clicking into them a user should see a different page rather than simply the view page that is accessible when purchasing the card.  
+    * There is practically no styling done on the project so the end product, while having good functionality, needs work to be more pleasing to the eye.
+      * Specifically, I would like to work more with bootstrap's built in functionalities to further enhance the styling of the website without taking away from its intrinsic simplicity. 
+      * Note that we were explicitly informed that styling would not be graded and as a result it was not something that I chose to focus on. 
+    * I would like to have had more effective use of simple form to create forms that stored more valuable information. 
+      * My forms were fine but probably too safe. There was little to no styling done on the create page that users are directed to and, while not game breaking, it still would be nice to have this aspect more tended to. 
+    * Databases were limited and as a result the scope of the application was much less than I would have liked to cover. 
+      * Essentially there was only one user database when in reality there should have been several in order to respect the normal forms rules that apply to databases. 
+    * I wanted to implement a system that would allow for the user to properly search through listings based off keywords but failed to do so in the time given. 
+      * In addition I wanted to implement a rating system that would persist and allow for posts to become favored over time based off crowed support. 
+    * A general note for the future was that my use of gems limited me from going beyond their base functionality. I should have focused on using them to build a bigger and better product rather than just a carbon copy of other sites that I like or enjoy. 
+    * Probably the first and most important lesson I learned through this work was that I need to keep my base ideas simple as they quickly bloom beyond originally intended scope due to the nature of how programming methods work. One thing constantly snowballing to another can work to the advantage of someone who stays simple at the start. On the flip side, in my case, this snowballing created far more complexity and issues with certain parts of the project. Trying to remedy these issues took away valuable development time that could have been spent better elsewhere.
 
-
-
+---
 ## Question 7
-Explain control flow, using an examples from the JavaScript programming language
+As this [article](https://medium.com/@rianna.cleary/control-flow-in-javascript-9c63d0c98bb9#:~:text=Control%20flow%20in%20JavaScript%20is,loops%2C%20conditionals%2C%20or%20functions.) states, "Control flow in JavaScript is how your computer runs code from top to bottom." in other words, code will be processed line by line and churned out in the order that it was placed on the page. However, in JavaScript there are several different forms of altering that control flow to force execution of certain operations before moving on. These are classed into three groups; loops, conditionals, and functions. Each of these can be represented by a few different forms of code and some of them are grouped and listed below:
 
-*Provides a thorough explanation of control flow in programminG*
+  * Conditionals
+    * While it may appear to be a misnomer as we often use the word condition when discussing for loops, conditionals are an entirely different class of operation. They function by creating a set of potential conditions that, if matched against an input, will execute and present information that is pertinent to that one condition. 
+    * An example of a conditional in JavaScript is a switch statement(known as a case statement in other languages). In the specific example below we can see a switch statement in action. First, a function is created which recieves some input, in this case (num). Num is a stand in that could be called anything, it is simply meant to represent what form of input we want, in this case, a number. From here the function is opened and we declare or invoke the switch statement. We indicate that we want the statement to run using the num input from the function that houses the statement by placing it in parenthesis after the switch keyword. Once this is set up we then create the cases which could be as many or as few as are needed based off the expected input. In this case, we are looking for any number in the range 1-7. Each specific case or instance of a number is bound to a specific action that returns a string representation of the day of the week based off the number fed in as input. Once this is set up, calling the function name (or in the case below, console.log()) along with a number 1-7 will activate the switch statment and return the appropriate day of the week. 
+    * It is important to note that in the example below, as there is no error handling, if a user entered 8 with the getDayOfTheWeek() function then there would be no return as there is no case for the number 8. 
+    * Switch statement example:
+```javascript
+function getDayOfTheWeek(num) {
+ switch (num) {
+  case 1:
+   return 'Monday';
+  case 2:
+   return 'Tuesday';
+  case 3:
+   return 'Wednesday';
+  case 4:
+   return 'Thursday';
+  case 5:
+   return 'Friday';
+  case 6:
+   return 'Saturday';
+  case 7:
+   return 'Sunday';
+ }
+}
+console.log(getDayOfTheWeek(4))
+// 'Thursday'
+```
+  * Loops
+    * Just as the name implies, a loop statement will stop code execution from continuing further until it is finished iterating over the information that it is meant to scour. This means that if a developer is not careful and they create an infinite loop, then the rest of their code will never execute. There are a few different types of loops but for our purposes I will analyze a basic for loop.
+    * An example of how a non-infinite loop works in javascript is included in the code that you see below. What is occurring here is that the user creates an array comprised of three string entities. They then invoke the for loop and enter the conditions under which the loop will continue to run. In this case, the loop creates a variable, i, and sets it equal to zero. Then it states the condition under which the loop should continue to run. In this case, as long as the value of i is less than the length of the edm array. The length of the edm array is three as it has three entities in it. Finally, each time the loop runs and the condition of its running is not met, i will be incremented by one. Internally there is a console.log statement which prints the value inside the parenthesis that follow it to the console. Within this console.log we see `edm[i]`. This represents the index of the array and by using i instead of a hard coded value like 1, console.log statement will continually shift in position as i increments up to the upper limit of the array.length. All of this in conjunction means that the log statement will operate on each entity within the array and each name will be printed to the console. 
+    * For loop Example:
+```javascript 
+const edm = ['House', 'Dubstep', 'Drum and Bass']
+for (let i = 0; i < edm.length; i++) {
+ console.log(edm[i])
+}
+// 'House'
+// 'Dubstep'
+// 'Drum and Bass'
+```
+  * Functions
+    * A continuation of the discussion above about loops and conditionals, functions allow for the storage of other actions and or logic processes that can be activated by calling the function later on in the code. In order to create a function, one invokes the function keyword followed by the name the user wants to assign the function in camel case. In the example below this is "printGenre" and "printFoods". Note that camel case is a form of typing in which a word has spaces omitted and each new word begins with a capital letter. After creating and naming the function the user decides if the function will take any input parameters. In our example it does, the word arr which is meant to represent an array that will be fed in when the function is called later on. Inside the function one may incorporate any action they wish and in this case we see two for loops have been invovled. Both of these for loops are doing the same thing as our example above so I won't explain that portion again. In addition to creating the function itself, we can also see two constants have been created. Both of them are arrays populated with three string entities respectively. With the set up done, in order to use the function to run the for-loops over the array constants that have been created we simply have to call or type their names and include the parameter that we want to feed into them in their parenthesis. In this case, the two constants that we have created are what we will feed into the functions and as a result of the for-loop fucntionality each of the strings in the array's are printed off by the console.log statements within the functions. 
+    * Example:
+```javascript
+const edm = ['House', 'Dubstep', 'Drum and Bass']
+const hungryFor = ['pizza', 'sushi', 'french fries']
 
-
-
+function printGenres(arr) {
+ for (let i = 0; i < edm.length; i++) {
+  console.log(edm[i])
+ }
+}
+function printFoods(arr) {
+ for (let i = 0; i < hungryFor.length; i++) {
+  console.log(hungryFor[i])
+ }
+}
+printFoods(hungryFor)
+printGenres(edm)
+// 'pizza'
+// 'sushi'
+// 'french fries'
+// 'House'
+// 'Dubstep'
+// 'Drum and Bass'
+```
+---
 
 ## Question 8
+
 Explain type coercion, using examples from the JavaScript programming language
 
 *Provides a thorough explanation of type coercion in programming*
+
+From the MDN [documentation](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion) on JavaScript, Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). In layman's terms, type coercion is the process of transforming a string into a number data type. This process is done implicitly or without the user having to write code that will carry out the coercion operation.
+
+Implicit Coercion:
+  * Example:
+```javascript
+const value1 = '5';
+const value2 = 9;
+let sum = value1 + value2;
+
+console.log(sum);
+```
+  * In the above example, type coercion is simply and concisely displayed. First, note that value1 is set as a string data type and value2 is set as a number data type. Next we see that the variable sum is created that adds these two value constants together. But wait, shouldn't this be impossible? How can someone add a string and a number? They are two different data types and as a result trying to add them should return an error! However, thanks to type coercion being implicit, the javascript compiler "decides" to turn the number 9 into a string '9'. Once this is done on the backend, the two strings are concatenated and, when the console.log(sum) line runs it will output '59' to the console.
+
+
 
 
 
@@ -198,22 +298,420 @@ Explain data types, using examples from the JavaScript programming language
 
 *Provides a thorough explanation of data types in programming*
 
+From the MDN [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) on JavaScript, there are two sets of types in the language; primitive values and objects.
+  * Primitive values are all types (other than objects) that define immutable values. 
+    * These values are comprised of seven different types:
+      * Boolean
+        * The boolean type is used to depict a logical entity. It can have two values, either true or false. Using the if else statement in the example below we can see that the console has two options, it either logs the first string if the boolean conditional is true or the second if the boolean conditional is false. Why is this valuable? With the boolean type it is possible to check whether or not a condition exists. If it does (or equates to true) then we do one thing and if not then we do the other.  
+        ```javascript
+        /* JavaScript if statement */
+        if (boolean conditional) {
+          // code to execute if the conditional is true
+        }
+        if (boolean conditional) {
+          console.log("boolean conditional resolved to true");
+        } else {
+          console.log("boolean conditional resolved to false");
+        }
+
+        /* JavaScript for loop */
+        for (control variable; boolean conditional; counter) {
+          // code to execute repeatedly if the conditional is true
+        }
+        ```
+      * Null
+        * The null type is used to refer to a value that is either nonexistent or invalid. In the case of the example below we can see that the function is set up to take one parameter, a string. The string is then stored as a constant m and matched against a regular expression that will return any vowels that are contained in the string. In order to simplify the testing process the code has been set up so that in the case that m explicitly equals null, the statment will return 0. In the event that there are vowels then the console will instead return the number of entities that comprise the new m constant. In other words, we can use null to test whether or not something exists, if not then we can quickly operate on that rather than having to write more code that would be redundant or unnecessary. 
+        ```javascript
+        function getVowels(str) {
+          const m = str.match(/[aeiou]/gi);
+            if (m === null) {
+              return 0;
+            }
+            return m.length;
+          }
+
+        console.log(getVowels('sky'));
+        // expected output: 0
+        ```
+      * Undefined
+        * Undefined is the type value assigned to variables that have just been created and as a result have no value. It can be seen as a placeholder until value is assigned to a variable. In the example below this is demonstrated in the var x that is instantiated without a value. When the user attempts to console.log the value of x, as it has no value assigned, the console statement will include undefined. 
+        ```javascript
+        var x; //create a variable but assign it no value
+
+        console.log("x's value is", x) //logs "x's value is undefined"
+        ```
+      * Number
+        * unlike in other languages like ruby, there is only one way to represent integer or whole number values in javascript. This is what the number data type is used for. In addition, there is no distinction between the differing forms of numbers, so decimal values, whole numbers, and all other forms of numericals are covered under the number data type. 
+      * BigInt
+        * Almost an extrapolation of the Number type, BigInt is used to represent numbers in javascript larger than 2^53 - 1. The reason this is implemented is that the number type cannot function above a set safe threshold. In order to determine or see this threshold one can enter `Number.MAX_SAFE_INTEGER` into the console. 
+        * An important note is that BigInt values and Number values cannot be mixed in operations and javascript will not run type coercion. 
+      * String
+        * Strings are sequences of characters that are used in javascript to represent text. In the example below we can see that in order to create a string, the set or sequence of characters must be wrapped in quotes which can be single, double or backticks. Strings can be concatenated with the `+` operator to create long sentences or return specific messages based off user interaction. 
+        ```javascript
+        const string1 = "A string primitive";
+        const string2 = 'Also a string primitive';
+        const string3 = `Yet another string primitive`;
+        ```
+      * Symbol 
+        * The symbol data type is used by invoking the `Symbol` function. Once assigned to a value the symbol moniker will assign that value a unique identity. The example below indicates this by showing two symbols that are seemingly exactly the same. However, as we see, the equality operator returns false indicating that these two are, in fact, not equal and thereby proving that each symbol is a unique identity. 
+        ```javascript
+        Symbol('foo') === Symbol('foo')  // false
+        ```
+  * Objects
+    * In javascript, an object is a collection of properties. Property values in objects can be of any data type as well as whole other objects. This nesting of value levels leads to the ability to create very complex data structures. Each property within an object is identified using a key value. In the example below we can see that the variable car is instantiated as an object containing three keys that are bound to values of different data types. The first, myCar is a string. Second, getCar is a function. Third, special is a variable. As we can see, the object is populated by multiple different data types and in order to access these types within the object we simply have to call the name of the object, in this case, car. Then append it with the key that we want to access the value of. doing this will return the value associated with that key. 
+    ```javascript
+    var sales = 'Toyota';
+
+    function carTypes(name) {
+      if (name === 'Honda') {
+        return name;
+      } else {
+        return "Sorry, we don't sell " + name + ".";
+      }
+    }
+        var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
+
+        console.log(car.myCar);   // Saturn
+        console.log(car.getCar);  // Honda
+        console.log(car.special); // Toyota
+    ```
+
 
 
 
 ## Question 10
-Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language
+For this question, rather than leaning on a resource from someone else's guide, I will use my own practice work with arrays in JavaScript. It may not be the highest level of technical efficiency but it does represent my genuine understanding of array manipulatuon, which I feel is more appropriate for this answer.
 
-*Demonstrates an extensive ability to manipulate arrays*
+Code Examples: 
+  ```javascript
+  var uniqueInOrder=function(iterable){
+      return iterable.split('').filter((i,idx) => iterable[idx-1] !== i);
+  }
+
+  // using filter to test and understand it more
+
+  function lessThanTen(array) {
+      return array.filter((arrayItem) => arrayItem > 10)
+  }
+
+  console.log(addOne([2, 14, 0, 2, 27, 33, 30, 0, 1, 11]))
 
 
 
+
+  function isPrime(num) {
+    for (let i = 2; num > i; i++) {
+      if (num % i == 0) {
+        return false;
+      }
+    }
+    return num > 1;
+  }
+
+  const primeCheck = array => console.log(array.filter(isPrime))
+
+  // primeCheck([-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13])
+
+
+  // function isBigEnough(value) {
+  //     return value >= 10
+  //   }
+
+  // input = [2, 2, 0, 2, 3, 3, 0, 0, 1, 1];
+
+  // return input.filter((i,idx) => input[idx-1] !== i)
+
+
+
+
+  // console.log(uniqueInOrder('AAAABBBCCDAABBB'))
+  // uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+  // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+
+  const stringBoi = 'the string is a datatype in javascript that is used to represent speech'
+
+  //Manipulation of a string into an array:
+
+  // old or traditional way
+  const splitString = stringBoi.split(' ');
+
+  //new ES6 way using the spread operator
+  const elipsesString = [...stringBoi];
+
+  //another new way using Array.from
+  const arrayFrom = Array.from(stringBoi)
+
+  console.log(splitString)
+  console.log(elipsesString)
+  console.log(arrayFrom)
+
+  let myArray = ['value1', 'value2', 'value3']
+
+  let mySet = new Set(myArray)
+
+
+
+  const setToArr = Array.from(mySet)
+
+  // console.log(mySet)
+
+  // console.log(mySet.has('value1'))
+
+  // console.log(setToArr)
+
+
+  const firstName = 'frederick';
+
+  const capitalizeName = [
+    // Capitalize the first character of the array. Use the spread operator to turn the name that is fed in into an array, then call on the 0th element of that array. Then turn that element into it's uppercase version. Note that this code will return the first element of the string only, nothing else. 
+    ...firstName[0].toUpperCase(),
+
+    // Ignore the first character and return the return the rest of the array. Spread operator will again create an array from the string being passed, except this time it will lop off the 0th element and keep the rest.
+    ...firstName.slice(1)
+  ]
+    // Join the array produced above to make a single string
+    .join('');
+
+  console.log(capitalizeName); // Frederick
+
+
+
+  ```
+
+  1. uniqueInOrder
+      * While this function does not take an array as an input, it does use the `.split('')` method to create an array and populate it with each letter of the string passed in as the original parameter. This is helpful as it allows us to operate on a string entity as if it were a number of several individual string characters. With the `.filter()` method it is then possible to actually apply rules onto this newly populated array in order to return only the elements that we are specifically looking for. The filter method is so powerful because we can pass an anonymous function into it to specify exactly how we would like to filter. In this case, all elements that are non-unique will be removed. 
+      * Note that in the case that we want to put the string back together, we can call `.join('')` after it filtering and the filtered entities will be combined into a single string. In the `.split()` and `.join()` methods, what is passed into the parenthesis is what the logic processor will use to know where to split and join the values at. In the case above we use `('')` to indicate that we want it done after each element. You could choose to put `('j')` in the parenthesis and it would only split and join where j's appear. 
+  2. lessThanTen
+      * Continuing on with my experimentation with the .filter() method, this time I used it in order to process an array and remove each element in the array that is less than ten. The returned array from this filter method will now only contain numbers greater than ten. (As you can see I was excited to work with .filter())
+  3. isPrime / primeCheck
+      * Here we have a predefined function that is called isPrime, its sole purpose is to determine whether or not the number passed into it is a prime number. Here is where the power of chaining methods on an array comes in. We take an array and we call .filter on it, but this time, instead of passing an anonymous function, we can pass in our isPrime method. Now it will search through the array of numbers and filter out any number that does not satisfy the isPrime function specification.
+  4. const firstName and ...firstName.slice(1)
+      * Here I have made use of the `...` or spread operator to turn first name into an array. From here I make use of the `.slice()` method which can be passed one or two parameters. The first parameter indicates where the slice should begin. It will allow for the removal of any element that comes before the index specified and return all elements that follow unless a second parameter is fed into the `.slice(1,5)` call. In that case, instead of return the rest of the array it would only return the elements that go to index 5. This method can be very helpful for allowing us to manipulate data within strings in a controlled an organized way without having to reconstruct or destroy the total dataset. 
+<br>
+I am aware that there are many more ways to manipulate arrays, such as .reduce etc. but I felt it would be wiser to show method's that I have properly understood rather than just copying and pasting and explaining examples from MDN examples that don't exactly show my own native comprehension of the methods. 
 
 
 ## Question 11
 Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language
 
 *Demonstrates an extensive ability to manipulate objects*
+
+For this question, rather than leaning on a resource from someone else's guide, I will use my groups' work from the Hackathon held from September 20-21. It may not be the highest level of technical efficiency but it does represent my genuine understanding of object manipulatuon in JavaScript, which I feel is more appropriate for this answer.
+
+* Code Examples:
+    ```javascript
+    / Return a list of abilities
+    const getAbilities = () => {
+        fetch('https://pokeapi.co/api/v2/ability')
+            .then((response) => response.json())        
+            .then((data) => createDropdown(data.results,"Abilities"))
+        .catch((e) => {
+          console.log(e.message);
+        });
+    }
+
+    // Return a list of types
+    const getTypes = () => {
+        fetch('https://pokeapi.co/api/v2/type')
+            .then((response) => response.json())        
+            .then((data) => createDropdown(data.results,"Types"))
+            //.then((obj) => console.log(obj))        
+        .catch((e) => {
+          console.log(e.message);
+        });
+    }
+
+    //Generete a dropdown with a list of options
+    const createDropdown = (objArray, title) => {
+        option = document.createElement('option');
+            option.value = "";
+            option.innerText = title;
+            document.getElementById(title).appendChild(option)
+        objArray.forEach((el) => {
+        option = document.createElement('option');
+            option.value = el.name;
+            option.innerText = el.name;
+            document.getElementById(title).appendChild(option)		
+        });
+          
+    }
+    getAbilities()
+    getTypes()
+
+
+    //Clear list and render list of pokemons with details 
+    const render = () => {
+        let pokemonContainer = document.querySelector('#pokemon')
+        pokemonContainer.innerText = "";
+        getPokemonList()
+    }
+
+    //Return a list of all pokemons, name and url only
+    const getPokemonList = () => {
+      fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+            .then((response) => response.json()) 
+            .then((pokemons) => { pokemons.results.forEach((pokemon) => getPokemonObject(pokemon,getAbility(), getText(),getType())); })        
+        .catch((e) => {
+          console.log(e.message);
+        });
+    };
+
+    //This function create and Append div to the HTML (CARD)
+    const renderCards = (obj) => {
+      if (obj) {
+            // All card container 
+            let cards = document.getElementById('pokemon');
+
+            // Flip card containers 
+            let card = document.createElement('div');
+            let back = document.createElement('div');
+            let content = document.createElement('div');
+            let front = document.createElement('div');
+
+            let pokeName = document.createElement('h2')
+            let stats = document.createElement('ul');
+            let pokeTypes = document.createElement('li');
+            let hp = document.createElement('li')
+            let attack = document.createElement('li')
+            let defence = document.createElement('li')
+            let specialAttack = document.createElement('li')
+            let specialDefence = document.createElement('li')
+            let speed = document.createElement('li')
+
+
+            // pokeSpecies = document.createElement('li')
+            //pokeIsLegendary = document.createElement('li')
+            front.classList.add("front");
+            front.classList.add(obj.types[0].type.name)
+            card.classList.add("card");
+            back.classList.add("back");
+            content.classList.add("content")
+            pokeName.classList.add("pokeName")
+            stats.classList.add("stats");
+            hp.classList.add("stat");
+            attack.classList.add("stat");
+            defence.classList.add("stat");
+            specialAttack.classList.add("stat");
+            specialDefence.classList.add("stat");
+            speed.classList.add("stat");
+
+            pokeName.innerText = capitalizeFirstLetter(obj.name)
+            pokeTypes.innerText = "Type: " + capitalizeFirstLetter(obj.types[0].type.name) 
+            hp.innerText = "HP: " + obj.stats[0].base_stat
+            attack.innerText = "Attack: " + obj.stats[1].base_stat
+            defence.innerText = "Defence: " + obj.stats[2].base_stat
+            specialAttack.innerText = "Special Attack: " + obj.stats[3].base_stat
+            specialDefence.innerText = "Special Defence: " + obj.stats[4].base_stat
+            speed.innerText = "Speed: " + obj.stats[4].base_stat
+
+
+            // pokeIsLegendary = obj.isLeg
+            cards.append(card);
+            card.append(content);
+            card.append(back);
+            content.append(front)
+            front.append(pokeName)
+            front.append(stats)
+            stats.append(pokeTypes)
+            stats.append(hp)
+            stats.append(attack)
+            stats.append(defence)
+            stats.append(specialAttack)
+            stats.append(specialDefence)
+            stats.append(speed)
+
+            front.append(createImage(obj.id))
+
+        // createImage(obj.id,cards)
+      }
+    };
+
+    //This function create and Append img to the HTML (CARD)
+    function createImage(id, cards){
+        let container = document.createElement('div')
+        container.classList.add('image')
+        let image = document.createElement('img')
+        image.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${id}.png`
+        image.classList.add("pokeImage")
+        return image
+        // container.append(image);
+        // cards.append(container);
+    }
+
+    //Return search box text
+    const getText = () => {
+      text = document.getElementById('search-box');
+      return text.value;
+    };
+
+    //Return selected Ability
+    const getAbility = () => {
+      cat = document.getElementById('Abilities');
+      return cat.value;
+    };
+
+    //Return selected Type
+    const getType = () => {
+      cat = document.getElementById('Types');
+      return cat.value;
+    };
+
+
+    // This function takes a pokemon name as argument and fetch and push a single pokemon object to pokemonObjectArray
+    const getPokemonObject = (pokemon, ability, text, type) => {    
+      fetch(pokemon.url)
+        .then((response) => response.json())
+            .then((data) => {
+                //Render card if no args
+                if (!ability && !text && !type) { renderCards(data); console.log(data)}
+
+                //Render card if ability only
+                if (ability && ability == data.abilities[0].ability.name && !text && !type) { renderCards(data); console.log(1); };
+
+                //Render card if ability & text
+                if (ability && ability == data.abilities[0].ability.name && text && data.name.includes(text) && !type) { renderCards(data); console.log(2); };
+
+                //Render card if ability & text & type
+                if (ability && ability == data.abilities[0].ability.name && text && data.name.includes(text) && type && type == data.types[0].type.name) { renderCards(data); console.log(3); };
+
+                //Render card if ability & type
+                if (ability && ability == data.abilities[0].ability.name && !text && type && type == data.types[0].type.name) { renderCards(data); console.log(4); };
+
+
+                //Render card if text only
+                if (!ability && text && data.name.includes(text) && !type) { renderCards(data); console.log(5); };
+
+                //Render card if text & type
+                if (!ability && text && data.name.includes(text) && type && type == data.types[0].type.name) { renderCards(data); console.log(6); };
+
+                //Render card if type only
+                if (type && type == data.types[0].type.name && !ability && !text) { renderCards(data); console.log(7); };
+                
+                
+            })
+        .catch((e) => {
+          console.log(e.message);
+        });
+    };
+
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
+
+    //On click search button, return pokemons
+    search = document.getElementById('showPokemon');
+    search.addEventListener('click', render);
+    ```
+
+This is the fetch.js file from our Hackamon application. We start off by accessing an API called [pokeapi](https://pokeapi.co/). From here we get into manipulating the object that is returned in that API fetch:
+  1. Fetches, getTypes & getAbilities
+      * Here is where the object is accessed from the API so that we can actually extract information from it. Unfortunately for us, it turned out that the pokeapi was a lot more complex than initially believed. It had so many layers of nesting that we had to make separate calls in order to access different parts of the object set. With these two constants we pull the abilities of each pokemon as well as the types of each pokemon. This is done in the form of a promise, evidenced by the `.then` syntax which means that this code can run asynchronously rather than stopping other processes from running further down in the page. In this line, `.then((data) => createDropdown(data.results,"Abilities"))` several things are happening. First, the parsed JSON object that comes from the line above it is passed to the `.then` which has an anonymous function invoked in it and is passed the createDropdown constant with an interesting parameter `data.results, "Abilities"`. These two elements are what we are interested in. With them, we are able to access `data` which is the name we have assigned our parsed JSON object and in order to dig into that object to access individual parts of it we simply append the named location within that object that those desired items are, after data. In this case, `.results` allows us access to what we are looking for. From here the abilities keyword allows us to tell our createDropdown what the dropdown should be called. 
+  2. Render & getPokemonList & getPokemonObject
+      * Next in the getPokemonList const we make another api call to just pull the original 151 pokemon from the api as there are thousands now and it would be too much data to pull at once and potentially slow our site down. This is done by adding the `pokemon?limit=151` to the end of our fetch which will manipulate the returned object to only include the original pokemon from red, yellow, and blue. Further down you see the getPokemoneObject const which allows us to create specifications for presenting data in any potential combination so that the user will not receive a null response which would lead them to be confused as to why they cant see anything. Finally, with render we append the information recieved from get pokemon list to the cards themselves. This is all done asynchronously as well which means that the user isn't stuck on a blank screen but can see an actual webpage before them. All of these in constants in conjunction are how we end up rendering a page that looks like this:
+        * ![Hackamon_image](Hackamon.png)
+      * It is important to note that the renderCards constant is how this actually comes together however, it doesn't specifically deal with accessing the object as that is done earlier on. It simply uses that object information in order to present it in a pretty way. 
+  3. This process (Hackathon) really helped me get my head wrapped around the idea of how to fetch a JSON object from an API. And, how to actually access and manipulate the data stored within that object once it is fetched. 
+
 
 
 
