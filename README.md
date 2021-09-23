@@ -3,9 +3,6 @@
 
 
 ## Question 1
-*Provides an extensive overview and description of a standard source control process*
-Provide an overview and description of a standard source control process for a large project
-
 Firstly, what is source control?
   * Taken directly from the Atlassian [documentation](https://www.atlassian.com/git/tutorials/what-is-version-control), source control and version control are two terms that are used interchangeably and should not be confused for separate systems. These terms are used to describe the process of both tracking and managing the changes that are made to software on a project. This process follows the same rules whether utilized on an individual level or all the way up to enterprise level. 
   * In other words, when utilizing source control, a team or individual can keep track of how they are changing code. Once at a stable point, with source control, they can either commit their changes or revert them without harming the overall project.
@@ -17,27 +14,26 @@ So, how should version control be conceptualized?
   * breaking these concepts down further, imagine that source control is a garden full of plants bearing fruits of all kinds and the VCS is a guidebook on how to properly tend and maintain that garden.
 
 
-Now that the basic definition of the term and its different forms of reference are covered, let's dive into the process of using source control on a large project (while remaining VCS agnositc to limit the confusion that may arise from use of specific terms that may work in one system but not another). 
+Now that the basic definition of the term and its different forms of reference are covered, let's dive into the process of using source control on a large project (while remaining VCS agnostic to limit the confusion that may arise from use of specific terms that may work in one system but not another). 
 1. Project initiation.
     * In the earliest stage of a project, it falls to the leader or PM to establish the basic rules of source control that will be adhered to until the work is finished and the project delivered to the customer.
     * Here the PM will create a main branch which functions as the universal and 'real' version of the project.
     * The team will be informed of the rules and protocols when it comes to attempting to manipulate this branch.
     * Administrators will be assigned who will be in charge of controlling how the team modifies the main branch.
-    <br>
 2. localization of tasks.
-    * At this stage inidivudals who have been assigned jobs in relation to the source code will copy or clone a version of that code to their local machine. 
+    * At this stage indivudals who have been assigned jobs in relation to the source code will copy or clone a version of that code to their local machine. 
       * This step is the first in the group of benefits that come with source control. Each team member is copying a version of the code to a branch on their local machine rather than working on the main branch itself. They are protecting the integrity of the source code while allowing themselves free reign to change and add whatever they see fit. 
 3. Submission of personal work against main branch. 
     * Once team members have completed their assigned work they will then submit their work to the main branch through a push from their local machine. 
       * This push stage is still separate from the main branch. Any changes made to the source code locally are still 'locked' within an environment that can be reviewed by admins before being made official against the main branch of work. 
 4. Review of changes and officiating of pull request.
-    * Any changes will be reviewed once pushed to the remote repository that stores the source code separately from all local environtments. 
-    * The push made in step three will lead to an admin recieving a pull request which will indicate the changes being made to source code. From here the admin is responsible for confirming or denying changes.
+    * Any changes will be reviewed once pushed to the remote repository that stores the source code separately from all local environments. 
+    * The push made in step three will lead to an admin receiving a pull request which will indicate the changes being made to source code. From here the admin is responsible for confirming or denying changes.
     * If the work done by a team member on their local machine is appropriate, their push request that registers as a pull request on the part of the admin will be accepted and all changes will be made official and merged into the main branch. 
-    * If admins have done their due dilligence, the main branch will be updated with all changes made.
+    * If admins have done their due diligence, the main branch will be updated with all changes made.
 5. Updating local machines with most recent changes.
     * Once changes are made to the main branch, it is best practice that anyone involved on the project whose work may be affected by those changes pull them to their local machine. This will save any redundancies arising from teammates completing a task that has already been finished. 
-Steps 1-5 will be repeated until the project is ready for delivery. Immediately, it should be clear to see how valuable the version control process is for projects that require collaboration as it limits the potentiallity for human error and maintains high levels of integrity for source code.
+Steps 1-5 will be repeated until the project is ready for delivery. Immediately, it should be clear to see how valuable the version control process is for projects that require collaboration as it limits the potentiality for human error and maintains high levels of integrity for source code.
 
 ---
 ## Question 2
@@ -54,7 +50,7 @@ In no particular order, the most important aspects of quality software are:
   * Testability 
     * The source code you write must not only meet the standards of implementation, it should also come with prepared tests that allow a new adopter the ability to see how it is crashing if it fails to work. In addition, this testing should be set up in a manner that is easy to use. If your software is harder to test than it is to write, then you have most likely created a non-quality piece of work. 
   * Portability 
-    * The source code that you write is is platform and operating system agnostic. Of course, there may be edge cases that require the development of software for a specific operating system. However, on the whole, it is best practice to write source code that can be ported to multiple operating systems and that can run on a range of hardware. Not only will this lead to higher quality software, it will also increase its chance of being adopted by more users. 
+    * The source code that you write is platform and operating system agnostic. Of course, there may be edge cases that require the development of software for a specific operating system. However, on the whole, it is best practice to write source code that can be ported to multiple operating systems and that can run on a range of hardware. Not only will this lead to higher quality software, it will also increase its chance of being adopted by more users. 
   * Efficiency
     * The idea here is that you want your software to put as little strain on the physical device and networks running it as possible. If your software is using a massive amount of memory to run, thereby slowing down other systems, then you are creating software that has not been designed with efficiency in mind. The bottom line is that efficient software is software that uses as little resources as possible while running. 
 <br>
@@ -63,10 +59,8 @@ These elements combined together form the basis of software that is considered q
 
 --- 
 ## Question 3
-Outline a standard high level structure for a MERN stack application and explain the components
-
 First things first, what is the MERN stack?
-  * MERN stands for MongoDB, Express, React, and Node. These are all individual technologies that, when "stacked" or used in conjunction, allow for the creation of 3-tier architecture (front end, back end, database). The real beauty of this whole system is that through the stack it is possible to create all of this solely through coding in Javascript.
+  * MERN stands for MongoDB, Express, React, and Node. These are all individual technologies that, when "stacked" or used in conjunction, allow for the creation of 3-tier architecture (front end, back end, database). The real beauty of this whole system is that through the stack it is possible to create all of this solely through coding in JavaScript.
 
 In order to simplify the structural analysis of a MERN stack app, let's break it down into three parts:
   * Front End 
@@ -89,19 +83,15 @@ In order to simplify the structural analysis of a MERN stack app, let's break it
       * The reason MongoDB is used over other databases is that it was designed to store JSON data natively rather than having to convert and compile into another language before processing. In addition, the query language with which it is accessed is built on JavaScript meaning that its use will come naturally to a developer working in JavaScript. 
     * This is considered the bottom, third, or database tier of the architecture pattern.
   * To learn more about where this run down came from and the nitty gritty of how the stack is comprised, information can be found [here](https://www.mongodb.com/mern-stack)
-
-<!-- Now that the stack's make up is explained, lets look at an actual app utilizing the MERN stack and see how each piece works. 
-  * [This](https://www.bezkoder.com/react-node-express-mongodb-mern-stack/) is the source information for the app in question.
-  * Pictorial representation of stack breakdown:
-    * ![MERN](architecture.png) -->
-
-
-
-
-
+```javascript
+  // wasn't sure if this section should be added... 
+  //   Now that the stack's make up is explained, lets look at an actual app utilizing the MERN stack and see how each piece works. 
+  // * [This](https://www.bezkoder.com/react-node-express-mongodb-mern-stack/) is the source information for the app in question.
+  // * Pictorial representation of stack breakdown:
+  //   * ![MERN](architecture.png) 
+```
 
 ## Question 4
-A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
 Most practices in the IT industry that have staying power are those that have a set protocol that is repeatable and will provide similar levels of results through many iterations. Below are the 6 skillsets and knowledge that would most help a team deliver on a project, with some variation depending on the size of the project:
 
@@ -110,7 +100,7 @@ Most practices in the IT industry that have staying power are those that have a 
   2. Funding capture and networking
       * Again, not necessary for this scenario specifically but generally very important. This step falls just in line behind step 1 and the two could almost be merged together. Ideally, a team will be comprised of a varying group of individuals with different capabilities and weaknesses. Once work has been won, how is it going to be funded? Who will provide those funds in order to bring the ideas of the client into reality? While in most cases companies can handle small projects funding needs on their own, in many cases large projects require support from outside investors. And, while it remains true that you cannot buy your way to success, it will certainly help give your team access to resources that will allow them to deliver a project or piece of work that should exceed the expectations of the client. 
   3. Project management
-      * Once the work has been won and funding is taken care of, the team will need to depend upon leadership to implement a project plan that will lead to successful delivery of work in a timely fashion. Industry standards indicate that agile methodolgy (described previously and referenced [here](https://plan.io/blog/what-is-agile-project-management/)) is the go to for project management. Having a project manager on the team certified in agile methodolgy is a huge benefit to any project as it will allow for proper setting and attainment of goals that will keep the whole team on track in regards to delivery. Each member of the team will be aware of what their specific tasks are and when they are required to be finished while not having to worry about the total project which would be a waste of their time andn reduce their efficiency. 
+      * Once the work has been won and funding is taken care of, the team will need to depend upon leadership to implement a project plan that will lead to successful delivery of work in a timely fashion. Industry standards indicate that agile methodology (described previously and referenced [here](https://plan.io/blog/what-is-agile-project-management/)) is the go to for project management. Having a project manager on the team certified in agile methodology is a huge benefit to any project as it will allow for proper setting and attainment of goals that will keep the whole team on track in regards to delivery. Each member of the team will be aware of what their specific tasks are and when they are required to be finished while not having to worry about the total project which would be a waste of their time and reduce their efficiency. 
   4. Source control 
       * Once the implementation plan has been put in place, the lead designer can set up source control for the project. As mentioned in section one at the beginning of this work, source control is how leaders of a project can be sure to maintain the integrity of the source code until it is ready to be delivered to the client. The team lead in charge of administering and setting up source control for the project will now be able to decide which VCS (Version Control System) they want to use and who should have the ability to accept pull requests which will alter the actual working product rather than a local copy on an individual's machine. This leader will also be in charge of making sure that the team under them has working knowledge of the source control methods planned for the project and is aware of what they can and cannot alter as they work through their assigned roles from step 3. 
   5. Ability to create quality software
@@ -122,10 +112,10 @@ Most practices in the IT industry that have staying power are those that have a 
         * Testability
         * Portability
         * Efficiency
-  6. maintainence of software post delivery
-      * Finally, once the project has been delivered and the client is satisfied with what they paid for the developer then becomes responsible for making sure they can address and fix any issues that may arise later on. It is not enough to simply deliver a product. The team will have to be accountable for their work and be able to be called on to fix issues that arise in the production environment once the software is in the clients hands.
+  6. Maintenance of software post delivery
+      * Finally, once the project has been delivered and the client is satisfied with what they paid for the developer then becomes responsible for making sure they can address and fix any issues that may arise later on. It is not enough to simply deliver a product. The team will have to be accountable for their work and be able to be called on to fix issues that arise in the production environment once the software is in the clients' hands.
 
-Are these 6 points the totallity of skills that make for a successful project delivery? Perhaps not. However, with these values instilled into a software companies' employees, it should be much easier to deliver a standout product and avoid the pitfalls that come with having a team that is unprepared for work in the real world.
+Are these 6 points the totality of skills that make for a successful project delivery? Perhaps not. However, with these values instilled into a software companies' employees, it should be much easier to deliver a standout product and avoid the pitfalls that come with having a team that is unprepared for work in the real world.
 
 ---
 
@@ -203,7 +193,7 @@ As this [article](https://medium.com/@rianna.cleary/control-flow-in-javascript-9
 
   * Conditionals
     * While it may appear to be a misnomer as we often use the word condition when discussing for loops, conditionals are an entirely different class of operation. They function by creating a set of potential conditions that, if matched against an input, will execute and present information that is pertinent to that one condition. 
-    * An example of a conditional in JavaScript is a switch statement(known as a case statement in other languages). In the specific example below we can see a switch statement in action. First, a function is created which recieves some input, in this case (num). Num is a stand in that could be called anything, it is simply meant to represent what form of input we want, in this case, a number. From here the function is opened and we declare or invoke the switch statement. We indicate that we want the statement to run using the num input from the function that houses the statement by placing it in parenthesis after the switch keyword. Once this is set up we then create the cases which could be as many or as few as are needed based off the expected input. In this case, we are looking for any number in the range 1-7. Each specific case or instance of a number is bound to a specific action that returns a string representation of the day of the week based off the number fed in as input. Once this is set up, calling the function name (or in the case below, console.log()) along with a number 1-7 will activate the switch statment and return the appropriate day of the week. 
+    * An example of a conditional in JavaScript is a switch statement(known as a case statement in other languages). In the specific example below we can see a switch statement in action. First, a function is created which receives some input, in this case (num). Num is a stand in that could be called anything, it is simply meant to represent what form of input we want, in this case, a number. From here the function is opened and we declare or invoke the switch statement. We indicate that we want the statement to run using the num input from the function that houses the statement by placing it in parenthesis after the switch keyword. Once this is set up we then create the cases which could be as many or as few as are needed based off the expected input. In this case, we are looking for any number in the range 1-7. Each specific case or instance of a number is bound to a specific action that returns a string representation of the day of the week based off the number fed in as input. Once this is set up, calling the function name (or in the case below, console.log()) along with a number 1-7 will activate the switch statement and return the appropriate day of the week. 
     * It is important to note that in the example below, as there is no error handling, if a user entered 8 with the getDayOfTheWeek() function then there would be no return as there is no case for the number 8. 
     * Switch statement example:
 ```javascript
@@ -230,7 +220,7 @@ console.log(getDayOfTheWeek(4))
 ```
   * Loops
     * Just as the name implies, a loop statement will stop code execution from continuing further until it is finished iterating over the information that it is meant to scour. This means that if a developer is not careful and they create an infinite loop, then the rest of their code will never execute. There are a few different types of loops but for our purposes I will analyze a basic for loop.
-    * An example of how a non-infinite loop works in javascript is included in the code that you see below. What is occurring here is that the user creates an array comprised of three string entities. They then invoke the for loop and enter the conditions under which the loop will continue to run. In this case, the loop creates a variable, i, and sets it equal to zero. Then it states the condition under which the loop should continue to run. In this case, as long as the value of i is less than the length of the edm array. The length of the edm array is three as it has three entities in it. Finally, each time the loop runs and the condition of its running is not met, i will be incremented by one. Internally there is a console.log statement which prints the value inside the parenthesis that follow it to the console. Within this console.log we see `edm[i]`. This represents the index of the array and by using i instead of a hard coded value like 1, console.log statement will continually shift in position as i increments up to the upper limit of the array.length. All of this in conjunction means that the log statement will operate on each entity within the array and each name will be printed to the console. 
+    * An example of how a non-infinite loop works in JavaScript is included in the code that you see below. What is occurring here is that the user creates an array comprised of three string entities. They then invoke the for loop and enter the conditions under which the loop will continue to run. In this case, the loop creates a variable, i, and sets it equal to zero. Then it states the condition under which the loop should continue to run. In this case, as long as the value of i is less than the length of the edm array. The length of the edm array is three as it has three entities in it. Finally, each time the loop runs and the condition of its running is not met, i will be incremented by one. Internally there is a console.log statement which prints the value inside the parenthesis that follow it to the console. Within this console.log we see `edm[i]`. This represents the index of the array and by using i instead of a hard coded value like 1, console.log statement will continually shift in position as i increments up to the upper limit of the array.length. All of this in conjunction means that the log statement will operate on each entity within the array and each name will be printed to the console. 
     * For loop Example:
 ```javascript 
 const edm = ['House', 'Dubstep', 'Drum and Bass']
@@ -242,7 +232,7 @@ for (let i = 0; i < edm.length; i++) {
 // 'Drum and Bass'
 ```
   * Functions
-    * A continuation of the discussion above about loops and conditionals, functions allow for the storage of other actions and or logic processes that can be activated by calling the function later on in the code. In order to create a function, one invokes the function keyword followed by the name the user wants to assign the function in camel case. In the example below this is "printGenre" and "printFoods". Note that camel case is a form of typing in which a word has spaces omitted and each new word begins with a capital letter. After creating and naming the function the user decides if the function will take any input parameters. In our example it does, the word arr which is meant to represent an array that will be fed in when the function is called later on. Inside the function one may incorporate any action they wish and in this case we see two for loops have been invovled. Both of these for loops are doing the same thing as our example above so I won't explain that portion again. In addition to creating the function itself, we can also see two constants have been created. Both of them are arrays populated with three string entities respectively. With the set up done, in order to use the function to run the for-loops over the array constants that have been created we simply have to call or type their names and include the parameter that we want to feed into them in their parenthesis. In this case, the two constants that we have created are what we will feed into the functions and as a result of the for-loop fucntionality each of the strings in the array's are printed off by the console.log statements within the functions. 
+    * A continuation of the discussion above about loops and conditionals, functions allow for the storage of other actions and or logic processes that can be activated by calling the function later on in the code. In order to create a function, one invokes the function keyword followed by the name the user wants to assign the function in camel case. In the example below this is "printGenre" and "printFoods". Note that camel case is a form of typing in which a word has spaces omitted and each new word begins with a capital letter. After creating and naming the function the user decides if the function will take any input parameters. In our example it does, the word arr which is meant to represent an array that will be fed in when the function is called later on. Inside the function one may incorporate any action they wish and in this case we see two for loops have been involved. Both of these for loops are doing the same thing as our example above so I won't explain that portion again. In addition to creating the function itself, we can also see two constants have been created. Both of them are arrays populated with three string entities respectively. With the set up done, in order to use the function to run the for-loops over the array constants that have been created we simply have to call or type their names and include the parameter that we want to feed into them in their parenthesis. In this case, the two constants that we have created are what we will feed into the functions and as a result of the for-loop functionality each of the strings in the array's are printed off by the console.log statements within the functions. 
     * Example:
 ```javascript
 const edm = ['House', 'Dubstep', 'Drum and Bass']
@@ -271,10 +261,6 @@ printGenres(edm)
 
 ## Question 8
 
-Explain type coercion, using examples from the JavaScript programming language
-
-*Provides a thorough explanation of type coercion in programming*
-
 From the MDN [documentation](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion) on JavaScript, Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). In layman's terms, type coercion is the process of transforming a string into a number data type. This process is done implicitly or without the user having to write code that will carry out the coercion operation.
 
 Implicit Coercion:
@@ -286,7 +272,7 @@ let sum = value1 + value2;
 
 console.log(sum);
 ```
-  * In the above example, type coercion is simply and concisely displayed. First, note that value1 is set as a string data type and value2 is set as a number data type. Next we see that the variable sum is created that adds these two value constants together. But wait, shouldn't this be impossible? How can someone add a string and a number? They are two different data types and as a result trying to add them should return an error! However, thanks to type coercion being implicit, the javascript compiler "decides" to turn the number 9 into a string '9'. Once this is done on the backend, the two strings are concatenated and, when the console.log(sum) line runs it will output '59' to the console.
+  * In the above example, type coercion is simply and concisely displayed. First, note that value1 is set as a string data type and value2 is set as a number data type. Next we see that the variable sum is created that adds these two value constants together. But wait, shouldn't this be impossible? How can someone add a string and a number? They are two different data types and as a result trying to add them should return an error! However, thanks to type coercion being implicit, the JavaScript compiler "decides" to turn the number 9 into a string '9'. Once this is done on the backend, the two strings are concatenated and, when the console.log(sum) line runs it will output '59' to the console.
 
 
 
@@ -294,15 +280,11 @@ console.log(sum);
 
 
 ## Question 9
-Explain data types, using examples from the JavaScript programming language
-
-*Provides a thorough explanation of data types in programming*
-
 From the MDN [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) on JavaScript, there are two sets of types in the language; primitive values and objects.
   * Primitive values are all types (other than objects) that define immutable values. 
     * These values are comprised of seven different types:
       * Boolean
-        * The boolean type is used to depict a logical entity. It can have two values, either true or false. Using the if else statement in the example below we can see that the console has two options, it either logs the first string if the boolean conditional is true or the second if the boolean conditional is false. Why is this valuable? With the boolean type it is possible to check whether or not a condition exists. If it does (or equates to true) then we do one thing and if not then we do the other.  
+        * The boolean type is used to depict a logical entity. It can have two values, either true or false. Using the if else statement in the example below we can see that the console has two options, it either logs the first string if the boolean conditional is true or the second if the boolean conditional is false. Why is this valuable? With the boolean type it is possible to check whether or not a condition exists. If it does (or equates to true) then we do one thing and if not, then we do the other.  
         ```javascript
         /* JavaScript if statement */
         if (boolean conditional) {
@@ -334,19 +316,19 @@ From the MDN [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaSc
         // expected output: 0
         ```
       * Undefined
-        * Undefined is the type value assigned to variables that have just been created and as a result have no value. It can be seen as a placeholder until value is assigned to a variable. In the example below this is demonstrated in the var x that is instantiated without a value. When the user attempts to console.log the value of x, as it has no value assigned, the console statement will include undefined. 
+        * Undefined is the type value assigned to variables that have just been created and as a result, have no value. It can be seen as a placeholder until value is assigned to a variable. In the example below this is demonstrated in the var x that is instantiated without a value. When the user attempts to console.log the value of x, as it has no value assigned, the console statement will include undefined. 
         ```javascript
         var x; //create a variable but assign it no value
 
         console.log("x's value is", x) //logs "x's value is undefined"
         ```
       * Number
-        * unlike in other languages like ruby, there is only one way to represent integer or whole number values in javascript. This is what the number data type is used for. In addition, there is no distinction between the differing forms of numbers, so decimal values, whole numbers, and all other forms of numericals are covered under the number data type. 
+        * unlike in other languages like ruby, there is only one way to represent integer or whole number values in JavaScript. This is what the number data type is used for. In addition, there is no distinction between the differing forms of numbers, so decimal values, whole numbers, and all other forms of numericals are covered under the number data type. 
       * BigInt
-        * Almost an extrapolation of the Number type, BigInt is used to represent numbers in javascript larger than 2^53 - 1. The reason this is implemented is that the number type cannot function above a set safe threshold. In order to determine or see this threshold one can enter `Number.MAX_SAFE_INTEGER` into the console. 
-        * An important note is that BigInt values and Number values cannot be mixed in operations and javascript will not run type coercion. 
+        * Almost an extrapolation of the Number type, BigInt is used to represent numbers in JavaScript larger than 2^53 - 1. The reason this is implemented is that the number type cannot function above a set safe threshold. In order to determine or see this threshold one can enter `Number.MAX_SAFE_INTEGER` into the console. 
+        * An important note is that BigInt values and Number values cannot be mixed in operations and JavaScript will not run type coercion. 
       * String
-        * Strings are sequences of characters that are used in javascript to represent text. In the example below we can see that in order to create a string, the set or sequence of characters must be wrapped in quotes which can be single, double or backticks. Strings can be concatenated with the `+` operator to create long sentences or return specific messages based off user interaction. 
+        * Strings are sequences of characters that are used in JavaScript to represent text. In the example below we can see that in order to create a string, the set or sequence of characters must be wrapped in quotes which can be single, double or backticks. Strings can be concatenated with the `+` operator to create long sentences or return specific messages based off user interaction. 
         ```javascript
         const string1 = "A string primitive";
         const string2 = 'Also a string primitive';
@@ -358,7 +340,7 @@ From the MDN [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaSc
         Symbol('foo') === Symbol('foo')  // false
         ```
   * Objects
-    * In javascript, an object is a collection of properties. Property values in objects can be of any data type as well as whole other objects. This nesting of value levels leads to the ability to create very complex data structures. Each property within an object is identified using a key value. In the example below we can see that the variable car is instantiated as an object containing three keys that are bound to values of different data types. The first, myCar is a string. Second, getCar is a function. Third, special is a variable. As we can see, the object is populated by multiple different data types and in order to access these types within the object we simply have to call the name of the object, in this case, car. Then append it with the key that we want to access the value of. doing this will return the value associated with that key. 
+    * In JavaScript, an object is a collection of properties. Property values in objects can be of any data type as well as whole other objects. This nesting of value levels leads to the ability to create very complex data structures. Each property within an object is identified using a key value. In the example below we can see that the variable car is instantiated as an object containing three keys that are bound to values of different data types. The first, myCar is a string. Second, getCar is a function. Third, special is a variable. As we can see, the object is populated by multiple different data types and in order to access these types within the object we simply have to call the name of the object, in this case, car. Then append it with the key that we want to access the value of. doing this will return the value associated with that key. 
     ```javascript
     var sales = 'Toyota';
 
@@ -380,7 +362,7 @@ From the MDN [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaSc
 
 
 ## Question 10
-For this question, rather than leaning on a resource from someone else's guide, I will use my own practice work with arrays in JavaScript. It may not be the highest level of technical efficiency but it does represent my genuine understanding of array manipulatuon, which I feel is more appropriate for this answer.
+For this question, rather than leaning on a resource from someone else's guide, I will use my own practice work with arrays in JavaScript. It may not be the highest level of technical efficiency but it does represent my genuine understanding of array manipulation, which I feel is more appropriate for this answer.
 
 Code Examples: 
   ```javascript
@@ -492,11 +474,7 @@ I am aware that there are many more ways to manipulate arrays, such as .reduce e
 
 
 ## Question 11
-Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language
-
-*Demonstrates an extensive ability to manipulate objects*
-
-For this question, rather than leaning on a resource from someone else's guide, I will use my groups' work from the Hackathon held from September 20-21. It may not be the highest level of technical efficiency but it does represent my genuine understanding of object manipulatuon in JavaScript, which I feel is more appropriate for this answer.
+For this question, rather than leaning on a resource from someone else's guide, I will use my groups' work from the Hackathon held from September 20-21. It may not be the highest level of technical efficiency but it does represent my genuine understanding of object manipulation in JavaScript, which I feel is more appropriate for this answer.
 
 * Code Examples:
     ```javascript
@@ -707,9 +685,9 @@ This is the fetch.js file from our Hackamon application. We start off by accessi
   1. Fetches, getTypes & getAbilities
       * Here is where the object is accessed from the API so that we can actually extract information from it. Unfortunately for us, it turned out that the pokeapi was a lot more complex than initially believed. It had so many layers of nesting that we had to make separate calls in order to access different parts of the object set. With these two constants we pull the abilities of each pokemon as well as the types of each pokemon. This is done in the form of a promise, evidenced by the `.then` syntax which means that this code can run asynchronously rather than stopping other processes from running further down in the page. In this line, `.then((data) => createDropdown(data.results,"Abilities"))` several things are happening. First, the parsed JSON object that comes from the line above it is passed to the `.then` which has an anonymous function invoked in it and is passed the createDropdown constant with an interesting parameter `data.results, "Abilities"`. These two elements are what we are interested in. With them, we are able to access `data` which is the name we have assigned our parsed JSON object and in order to dig into that object to access individual parts of it we simply append the named location within that object that those desired items are, after data. In this case, `.results` allows us access to what we are looking for. From here the abilities keyword allows us to tell our createDropdown what the dropdown should be called. 
   2. Render & getPokemonList & getPokemonObject
-      * Next in the getPokemonList const we make another api call to just pull the original 151 pokemon from the api as there are thousands now and it would be too much data to pull at once and potentially slow our site down. This is done by adding the `pokemon?limit=151` to the end of our fetch which will manipulate the returned object to only include the original pokemon from red, yellow, and blue. Further down you see the getPokemoneObject const which allows us to create specifications for presenting data in any potential combination so that the user will not receive a null response which would lead them to be confused as to why they cant see anything. Finally, with render we append the information recieved from get pokemon list to the cards themselves. This is all done asynchronously as well which means that the user isn't stuck on a blank screen but can see an actual webpage before them. All of these in constants in conjunction are how we end up rendering a page that looks like this:
+      * Next in the getPokemonList const we make another api call to just pull the original 151 pokemon from the api as there are thousands now and it would be too much data to pull at once and potentially slow our site down. This is done by adding the `pokemon?limit=151` to the end of our fetch which will manipulate the returned object to only include the original pokemon from red, yellow, and blue. Further down you see the getPokemoneObject const which allows us to create specifications for presenting data in any potential combination so that the user will not receive a null response which would lead them to be confused as to why they can't see anything. Finally, with render we append the information received from get pokemon list to the cards themselves. This is all done asynchronously as well which means that the user isn't stuck on a blank screen but can see an actual webpage before them. All of these in constants in conjunction are how we end up rendering a page that looks like this:
         * ![Hackamon_image](Hackamon.png)
-      * It is important to note that the renderCards constant is how this actually comes together however, it doesn't specifically deal with accessing the object as that is done earlier on. It simply uses that object information in order to present it in a pretty way. 
+      * It is important to note that the renderCards constant is how this actually comes together however, it doesn't specifically deal with accessing the object as that is done earlier on. It simply uses that object information in-order-to present it in a pretty way. 
   3. This process (Hackathon) really helped me get my head wrapped around the idea of how to fetch a JSON object from an API. And, how to actually access and manipulate the data stored within that object once it is fetched. 
 
 
@@ -717,70 +695,99 @@ This is the fetch.js file from our Hackamon application. We start off by accessi
 
 
 ## Question 12
-Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language
+While I could dive back into the Hackamon example from earlier to discuss this point (it does parse a JSON object), I think it makes more sense for me to separately describe the methods for manipulating JSON as explained by the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) docs. 
 
-*Demonstrates an extensive ability to manipulate JSO*
+JSON.parse 
+  * With the `.parse()` method it is possible to construct a JavaScript object or value from a JSON string. This may sound like a bunch of technical jargon (mainly because it is), essentially, this allows us to pull JSON strings from their place of storage and turn them into code that is readable and manipulable in the JavaScript coding language. In the example below you can see that the const is what we would normally recognize as a JavaScript Object but it is all in the form of a string. When using the `.parse(json)` on the constant invoked in the line before we are able to convert this string into an object. From here we can manipulate it like any normal object we would create in JavaScript. We can call `.count` and since this is now an object `.count` returns the value that is associated with it, in this case, the integer 42. This is crazy since before the parse this was all just one big string!
+  * Code Example:
+```javascript
+      const json = '{"result":true, "count":42}';
+      const obj = JSON.parse(json);
 
+      console.log(obj.count);
+      // expected output: 42
 
+      console.log(obj.result);
+      // expected output: true
+```
 
+JSON.Stringify
+  * The `.stringify()` method makes it possible to convert a JavaScript object or value to a JSON string. With the above definition of the `.parse()` method, it should be immediately apparent that these two are meant to go hand in hand. One allows you to pull JSON data into a JavaScript object to manipulate and work on while the other allows you to turn it back into a JSON string when you are ready to return your changes. In the examples provided from the MDN documentation that are featured below this is clear to see. In the first `console.log()` statement we can see that an object is successfully returned as a string by invoking the `.stringify()` method around it. It is important to note that the `.stringify()` method works on all the primitive data types rather than objects alone. This relationship can be seen in the second example below where we see undefined, null, boolean, number, array, and object data types all being converted to a JSON string. 
+  * Code Example:
+```javascript
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// expected output: "{"x":5,"y":6}"
 
+console.log(JSON.stringify([new Number(3), new String('false'), new Boolean(false)]));
+// expected output: "[3,"false",false]"
 
+console.log(JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] }));
+// expected output: "{"x":[10,null,null,null]}"
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// expected output: ""2006-01-02T15:04:05.000Z""
+
+```
+  * Code Example
+```javascript
+JSON.stringify({});                    // '{}'
+JSON.stringify(true);                  // 'true'
+JSON.stringify('foo');                 // '"foo"'
+JSON.stringify([1, 'false', false]);   // '[1,"false",false]'
+JSON.stringify([NaN, null, Infinity]); // '[null,null,null]'
+JSON.stringify({ x: 5 });              // '{"x":5}'
+```
+
+The important thing to take from these examples of the JSON methods are what they allow us as developers to do. We can effectively store a huge amount of information in a string format for ease of compilation and processing. Then if we need to access that data and make it usable and manipulable we can quickly convert it to an object, work with that object, and then pass it right back in its original form.
 
 ## Question 13
-For the code snippet provided below, write comments for each line of code to explain its functionality. In your comments you must demonstrates your ability to recognise and identify functions, ranges and classes
-
-*Demonstrates an extensive ability to recognise functions, ranges and classes*
-
 ```js
 
 // Write notes
-
+// creation of a Class.
 class Car {
+// the constructor probably has a better formal definition but the way I think of it is that it is the blueprint declaration that is set up inside of a class. So essentially once the class is initialized, the constructor is how we specify what features each new instance of a car should have. You could pass many parameters here if you wanted each new instance to have a plethora of features. So, instead of just brand, you could have year, trim level, color, etc.
   constructor(brand) {
+    // by invoking this.carname we are setting the brand of the car to equal the carname property so when we make a new instance of the car class and pass in hyundai as brand it will automatically be passed to this.carname and can then be used to display personalized messages rather than hardcoded responses which may not be relevant based off user input.  
     this.carname = brand;
   }
+    // this is a continuation of the comment above. Here we see string interpolation utilized by the present function to return a custom string based of which car brand was initially passed in when the new car object is initialized and used for varying brands of car. 
   present() {
     return 'I have a ' + this.carname;
   }
 }
-
+  // here the extends functionality is appended to the creation of a subclass that will inherit from the overarching or parent class; Car. 
 class Model extends Car {
+  // the constructor is invoked once more with brand and a new parameter; mod. 
   constructor(brand, mod) {
+    // since the original class declaration already used brand and set up its storage we only have to call the super method which will essentially pull the functionality from our parent class down to our subclass.
     super(brand);
+    // since mod is new, the same process we went through in the above section with this.carname is done on mod. this.model will now store the mod parameter as it is passed in if this new subclass is used to initialize a new model.
     this.model = mod;
   }
+  // in the show function something cool happens. Since we created present in the parent class, Car, it is possible to inherit and make use of those functions in subclasses of Car. So here we create a new function that returns an data interpolated string that not only now has access to this.model but also to the whole entire present function from above!! -- very cool. 
   show() {
     return this.present() + ', it was made in ' + this.model;
   }
 }
-
+  // here a new variable is created called makes. It stores an array populated with three individual strings that are car brands. 
 let makes = ["Ford", "Holden", "Toyota"]
+  // next, a new varibale is created called models. In it we use the Array.from() method that will coerce what is passed into it into an array. Inside the method we see the rules for how to populate the newly created array. Here we specify that we want the array to have 40 values stored within it. We're not done though. Right now there are just 40 undefined data types within the array. Next we pass in the rules of how to populate the array. Starting at 1980 the array will increment 1 value at a time ending at 2020. 
 let models = Array.from(new Array(40), (x,i) => i + 1980)
-
+  // next we see a new function is created that takes two parameters (min and max) 
 function randomIntFromInterval(min,max) { // min and max included
+  // then we utilize the Math.floor() method which will round down the returned value that is passed to it by the functions within the method parenthesis. Within the parenthesis we see Math.random is called. Math.random will return a number between the range of 0 and less than 1. Next we deal with order of operations. First we carry out (max - min + 1) in the order they appear, so max will have min subtracted from it and then 1 will be added to the result. Next the multiplication is carried out with the random decimal value returned from Math.random and finally min will be added to the result of that!
     return Math.floor(Math.random()*(max-min+1)+min);
 }
-
+  // here a for loop is created that will iterate through the models array that was created three lines earlier. It is set up so that each individual element of the models array will be able to be worked on. 
 for (model of models) {
-
+  // next we create two different variables that are used to present information. The first, make, will use the makes constant initialized earlier. In conjunction with the randomIntFromInterval function where zero is the min and the max is the total number of options available in the array (makes.length-1 is how you would say this in code). This number will be whole thanks to the Math.floor in the function and as a result will serve as the index of the value we want from the makes array. Once all this is done, this value is dynamically assigned to the make variable to be printed out later when we console.log(mycar.show) -- more on that in a second. 
   make = makes[randomIntFromInterval(0,makes.length-1)]
+  // there is one error in this code for the assignment of the model variable... or it doesn't have great functionality. It works the exact same way that the make variable assignment does. Which isn't great because it will only have the ability to display 3 of the 40 possible model years from within the models array created earlier. In order to fix the issue all the needs to be changed is the makes.length-1 portion which should instead read models.length-1. Doing so will now mean that there are 40 options for model years rather than 3.  
   model = models[randomIntFromInterval(0,makes.length-1)]
-
+  // next we create a new instance of the Model class and pass in its two required parameters that have just been created by the for loop variables make and model and since mycar is an instance of the Model class we can use the functions created in it. So we console.log(mycar.show()) and 40 results are returned as expected!
   mycar = new Model(make, model);
   console.log(mycar.show())
+  // I may not get a perfect score on this, but I gotta say, I know some code!
 }
 ```
-
-
-
-
-
-
-Notes with release:
-
-Due: 23rd of September 2021
-
-More than one example is best
-
-Q13 is worth double marks
-
